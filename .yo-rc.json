@@ -1,0 +1,25 @@
+{
+  "generator-m-ionic": {
+    "answers": {
+      "appName": "newsApp",
+      "appId": "com.portOfSplutions.newsApp",
+      "ionicCss": true,
+      "bowerPackages": [
+        "angular-dynamic-locale#~0.1.27",
+        "angular-translate#~2.7.2",
+        "angular-translate-loader-static-files#~2.7.2",
+        "angular-localForage#~1.2.3"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "plugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-dialogs",
+        "cordova-plugin-network-information",
+        "cordova-plugin-statusbar"
+      ],
+      "appModule": "newsApp"
+    }
+  }
+}

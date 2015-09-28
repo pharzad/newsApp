@@ -1,0 +1,17 @@
+<ion-view view-title="HeadLines">
+  <ion-content>
+
+    <!-- content goes here -->
+    <ion-list>
+      <ion-item ng-repeat ="feed in news"
+        class="item-remove-animate item-avatar item-icon-right"
+        type="item-text-wrap"
+        ng-click = "goTo(feed.link)">
+        <img src="{{feed.img}}">
+        <h3 style="white-space: normal !important;">{{feed.title}}</h3>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
