@@ -1,68 +1,49 @@
 <ion-side-menus enable-menu-with-back-views="false">
 
-  <!-- CONTENT -->
-  <ion-side-menu-content>
+    <!-- CONTENT -->
+    <ion-side-menu-content>
 
-    <!-- header bar -->
-    <!-- the nav bar will be updated as we navigate between views -->
-    <ion-nav-bar class="bar-stable">
-      <!-- back button, shown if applicable -->
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-      <!-- nav button, shown if applicable -->
-      <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-        </button>
-      </ion-nav-buttons>
-    </ion-nav-bar>
+        <!-- header bar -->
+        <!-- the nav bar will be updated as we navigate between views -->
+        <ion-nav-bar class="bar-stable">
+            <!-- back button, shown if applicable -->
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <!-- nav button, shown if applicable -->
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
 
-    <!-- ROUTING INJECTED HERE: pageContent -->
-    <ion-nav-view name="pageContent"></ion-nav-view>
+        <!-- ROUTING INJECTED HERE: pageContent -->
+        <ion-nav-view name="pageContent"></ion-nav-view>
 
-  </ion-side-menu-content>
+    </ion-side-menu-content>
 
-  <!-- SIDEMENU -->
-  <ion-side-menu side="left">
+    <!-- SIDEMENU -->
+    <ion-side-menu side="left">
 
-    <!-- menu header -->
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">FEEDS</h1>
-    </ion-header-bar>
+        <!-- menu header -->
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">FEEDS</h1>
+        </ion-header-bar>
 
-    <!-- menu content -->
-    <ion-content>
-      <ion-list>
-        <ion-item menu-close ui-sref="main.home">
-          Top News
-        </ion-item>
-        <ion-item menu-close ui-sref="main.list({news:'bbc'})">
-          BBC
-        </ion-item>
-        <ion-item menu-close ui-sref="main.list({news:'cnn'})">
-          CNN
-        </ion-item>
-          <ion-item menu-close ui-sref="main.list({news:'euroNews'})">
-          EuroNews
-        </ion-item>
-          <ion-item menu-close ui-sref="main.list({news:'goal'})">
-          Goal
-        </ion-item>
-          <ion-item menu-close ui-sref="main.list({news:'cnnMoney'})">
-          Cnn Money
-        </ion-item>
-          <ion-item menu-close ui-sref="main.list({news:'cnet'})">
-          Cnet
-        </ion-item>
-          <ion-item menu-close ui-sref="main.list({news:'aljazira'})">
-          al jazeera
-        </ion-item>
-          
-          <ion-item menu-close>
-          More To Come Here
-        </ion-item>
-      </ion-list>
-    </ion-content>
+        <!-- menu content -->
+        <ion-content>
+            <ion-list>
+                <ion-item menu-close ui-sref="main.home">
+                    Top News
+                </ion-item>
+                <ion-item ng-repeat="source in sources" menu-close ui-sref="main.list({news:source.title})">
+                    {{source.title}}
+                </ion-item>
+                <ion-item menu-close>
+                    More To Come Here
+                </ion-item>
+            </ion-list>
+        </ion-content>
 
-  </ion-side-menu>
+    </ion-side-menu>
 
 </ion-side-menus>

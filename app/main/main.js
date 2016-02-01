@@ -42,14 +42,5 @@ angular.module('main', [
             controller: 'listDetail as detail'
           }
         }
-      })
-      .state('main.debug', {
-        url: '/debug',
-        views: {
-          'pageContent': {
-            templateUrl: 'main/templates/debug.html',
-            controller: 'DebugCtrl as ctrl'
-          }
-        }
       });
 });
